@@ -14,6 +14,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 import os
 load_dotenv()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,7 +43,9 @@ DJANGO_APPS = [
 
 ]
 
-APPLICATION_APPS = ['pages.apps.PagesConfig']
+APPLICATION_APPS = ['pages.apps.PagesConfig',
+                    'doctors.apps.DoctorsConfig',
+                    'listings.apps.ListingsConfig']
 
 INSTALLED_APPS = DJANGO_APPS + APPLICATION_APPS
 
